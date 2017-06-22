@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avasni/hello-jenkins.git"
+    "url": "git+https://github.com/80017/Jenkins_Test.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/avasni/hello-jenkins/issues"
+    "url": "https://github.com/80017/Jenkins_Test/issues"
   },
-  "homepage": "https://github.com/avasni/hello-jenkins#readme",
+  "homepage": "https://github.com/80017/Jenkins_Test#readme",
   "dependencies": {
     "express": "^4.15.2",
     "forever": "^0.15.3"
@@ -25,3 +25,7 @@
     "supertest": "^3.0.0"
   }
 }
+
+
+
+
