@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh app@139.59.35.45 <<EOF
+ssh appp@139.59.35.45 <<EOF
   cd ~/Jenkins_Test
   git pull
   npm install --production
