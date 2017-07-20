@@ -6,7 +6,7 @@ stage('check test')
        {
          try
          {
-          sh './script/test/'
+          sh '/var/lib/jenkins/workspace/testcase@2@tmp/durable-db7b9fc7/script.sh/script/test/'
          }
          catch(any)
          {
