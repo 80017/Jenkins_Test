@@ -6,7 +6,7 @@ stage('check test')
        {
          try
          {
-            sh 'echo "Tests passed"'
+            sh '.test/test.js'
          }
          catch(any)
          {
