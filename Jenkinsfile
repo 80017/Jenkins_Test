@@ -42,7 +42,7 @@ stage('check test')
          }
        }
     }
- stage('pass test')
+ stage('pass test.......')
    {
     node
        {
