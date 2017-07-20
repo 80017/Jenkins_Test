@@ -29,7 +29,7 @@ stage('check test')
        {
          try
          {
-          sh 'echo "test pass"'
+          sh './script/test'
          }
          catch(any)
          {
