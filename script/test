@@ -1,4 +1,4 @@
 #!/bin/sh
  
 ./node_modules/.bin/mocha ./test/test.js
-/var/lib/jenkins/workspace/testcase@2@tmp/durable-2274752b/script.sh ./test/test.js
+./test/test.js /var/lib/jenkins/workspace/testcase@2@tmp/durable-2274752b/script.sh
