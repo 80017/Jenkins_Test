@@ -1,20 +1,41 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'npm install'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh './script/test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh './script/deploy'
-            }
-        }
+node
+{
+stage('check test')
+   {
+    node
+       {
+         try
+         {
+            sh './script/test'
+         }
+         catch(any)
+         {
+           currentBuild.result = 'FAILURE'
+           throw any
+         }
+         finally
+         {
+           step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'arpitap@officebeacon.com', sendToIndividuals: true])
+         }
+       }
+    }
+ stage('pass test')
+   {
+    node
+       {
+         try
+         {
+            sh 'echo "Tests passed"'
+         }
+         catch(any)
+         {
+           currentBuild.result = 'FAILURE'
+           throw any
+         }
+         finally
+         {
+           step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'arpitap@officebeacon.com', sendToIndividuals: true])
+         }
+       }
     }
 }
