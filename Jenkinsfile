@@ -1,12 +1,35 @@
 node
 {
+   stage('Clone repository')
+  {
+    node
+    {
+      try
+      {
+        checkout scm
+        currentBuild.result = 'SUCCESS'
+      }
+      catch(any)
+      {
+         currentBuild.result = 'FAILURE'
+         throw any
+      }
+      finally
+      {
+          step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'arpitap@officebeacon.com', sendToIndividuals: true])
+      }
+    }
+   }
+   
+   
+   
 stage('check test')
    {
     node
        {
          try
          {
-          sh '/var/lib/jenkins/workspace/testcase@2@tmp/durable-db7b9fc7/script/test/'
+          sh './script/test/'
          }
          catch(any)
          {
