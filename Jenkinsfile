@@ -6,7 +6,7 @@ stage('check test')
        {
          try
          {
-          sh './script/test'
+          sh './script/test/'
          }
          catch(any)
          {
