@@ -7,6 +7,6 @@ app.get('/', function (req, res) {
 
 app.listen(process.env.PORT || 4444, function () {
   console.log('Example app listening on port 4444!')
-})
+});
 
 module.exports = app;
