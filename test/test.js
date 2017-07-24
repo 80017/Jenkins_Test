@@ -7,7 +7,7 @@ describe('GET /', function() {
   });
 });
 
-describe('GET /', function() {
+describe('POST /', function() {
   it('respond with', function(done) {
     request(app).get('/').expect('hello world from ob', done);
   });
