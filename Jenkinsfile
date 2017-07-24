@@ -29,7 +29,7 @@ stage('check test')
        {
          try
          {
-          sh 'npm run test'
+          sh './script/test'
          }
          catch(any)
          {
