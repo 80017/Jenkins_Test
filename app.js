@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 
-app.get('/', function (req, res) {
+app.get('/a', function (req, res) {
   res.send('hello world from ob');
 });
 
