@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.027" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-07-28T06:13:42" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="GET /" timestamp="2017-07-28T06:13:42" tests="1" file="/var/www/html/28-date/clone_github/Jenkins_Test/test/test.js" failures="0" time="0.027">
+    <testcase name="GET / respond with hello world" time="0.027" classname="respond with hello world">
+    </testcase>
+  </testsuite>
+</testsuites>

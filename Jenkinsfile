@@ -33,9 +33,7 @@ stage('check test')
              
              sh 'npm install --save-dev mocha'
              sh 'mocha'
-             sh 'npm install mocha-junit-reporter --save-dev'
              
-             sh 'mocha test --reporter mocha-junit-reporter'
              junit 'test-results.xml'
          }
          catch(any)
