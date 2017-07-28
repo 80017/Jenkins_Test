@@ -30,8 +30,8 @@ stage('check test')
          try
          {
              sh 'npm install'
-             sh 'npm install chai@latest -S'
-           
+             
+             sh 'npm install --save-dev mocha'
              sh 'mocha'
              sh 'npm install mocha-junit-reporter --save-dev'
              
