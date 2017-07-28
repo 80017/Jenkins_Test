@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 
 app.get('/', function (req, res) {
-  res.send('hello world from ob');
+  res.send('hello world from');
 });
 
 app.listen(process.env.PORT || 4444, function () {
