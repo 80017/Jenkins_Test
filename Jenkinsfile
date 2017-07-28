@@ -31,7 +31,7 @@ stage('check test')
          {
              sh 'npm install'
              
-             sh 'npm install --save-dev mocha'
+             sh 'npm install --global mocha'
              sh 'mocha'
              sh 'npm install mocha-junit-reporter --save-dev'
              
