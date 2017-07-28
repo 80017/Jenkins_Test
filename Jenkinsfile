@@ -29,7 +29,14 @@ stage('check test')
        {
          try
          {
-          sh './script/test'
+             sh 'npm install'
+             sh 'npm install chai@latest -S'
+           
+             sh 'npm run test'
+             sh 'npm install mocha-junit-reporter --save-dev'
+             
+             sh 'mocha test --reporter mocha-junit-reporter'
+             junit 'test-results.xml'
          }
          catch(any)
          {
